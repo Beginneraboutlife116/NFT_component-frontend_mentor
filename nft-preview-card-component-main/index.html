@@ -2,32 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <article class="card">
+    <figure class="card__picture"><img src="./images/image-equilibrium.jpg" alt=""></figure>
+    <section class="card__info">
+      <h1 class="card__info-title">Equilibrium #3429</h1>
+      <h3 class="card__info-describe">Our Equilibrium collection promotes balance and calm.</h3>
+      <p class="card__info-detail">
+        <p class="card__info-price">
+          <figure class="card__info-price--icon"></figure>
+          <span class="card__info-price--unit">0.041 ETH</span>
+        </p>
+        <time class="card__info-time">3 days left</time>
+      </p>
+    </section>
+  </article>
+  <footer class="card__creator">
+    <figure class="card__creator-avatar"><img src="./images/image-avatar.png" alt=""></figure>
+    <div>
+      <span class="card__creator-name">Creation of <strong>Jules Wyvern</strong></span>
+    </div>
+  </footer>
 </body>
 </html>
