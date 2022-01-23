@@ -4,9 +4,77 @@ $soft-blue: hsl(215, 51%, 70%);
 $cyan: hsl(178, 100%, 50%);
 $mainBg: hsl(217, 32%, 27%);
 $cardBg: hsl(216, 50%, 16%);
-$white: hsl(0, 0, 100%);
 $fz-paragraph: 18px;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 html {
   font-family: 'Outfit', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $mainBg;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 21em;
+  height: 35em;
+  padding: 1.75em;
+  background-color: $cardBg;
+  border-radius: 1em;
+  &__picture > img{
+    border-radius: 0.5em;
+  }
+  &__info {
+    // margin-block: 1em;
+    // padding-top: 0.5em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-bottom: 1px solid rgba($color: $soft-blue, $alpha: 0.5);
+    &-title {
+      color: white;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    &-describe {
+      color: $soft-blue;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    &-detail {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-price {
+      color: $cyan;
+    }
+    &-time {
+      color: $soft-blue;
+    }
+  }
+  &__creator {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    &-avatar {
+      width: 12.5%;
+      border: 1px solid rgba($color: #fff, $alpha: 0.85);
+      border-radius: 50%;
+    }
+    &-name {
+      color: $soft-blue;
+      & > span {
+        color: rgba($color: #fff, $alpha: 0.85);
+        font-weight: 300;
+      }
+    }
+  }
 }

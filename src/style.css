@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 /* A Modern CSS Reset from Andy */
 /* Box sizing rules */
 *,
@@ -75,6 +76,71 @@ select {
 }
 html {
   font-family: "Outfit", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f405b;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 21em;
+  height: 35em;
+  padding: 1.75em;
+  background-color: #14253d;
+  border-radius: 1em;
+}
+.card__picture > img {
+  border-radius: 0.5em;
+}
+.card__info {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-bottom: 1px solid rgba(139, 172, 218, 0.5);
+}
+.card__info-title {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.card__info-describe {
+  color: #8bacda;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.card__info-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.card__info-price {
+  color: #00fff7;
+}
+.card__info-time {
+  color: #8bacda;
+}
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.card__creator-avatar {
+  width: 12.5%;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+}
+.card__creator-name {
+  color: #8bacda;
+}
+.card__creator-name > span {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
