@@ -119,6 +119,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.card__info-price, .card__info-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
 .card__info-price {
   color: #00fff7;
 }

@@ -53,6 +53,11 @@ body {
       display: flex;
       justify-content: space-between;
     }
+    &-price, &-time {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
     &-price {
       color: $cyan;
     }
