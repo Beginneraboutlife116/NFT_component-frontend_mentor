@@ -95,6 +95,30 @@ body {
   background-color: #14253d;
   border-radius: 1em;
 }
+.card__picture {
+  position: relative;
+  cursor: pointer;
+}
+.card__picture::after, .card__picture::before {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.card__picture::after {
+  content: url(/images/icon-view.svg);
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+.card__picture::before {
+  content: "";
+  background-color: rgba(0, 255, 247, 0.4);
+  border-radius: 0.5em;
+}
+.card__picture:hover::after, .card__picture:hover::before {
+  opacity: 1;
+}
 .card__picture > img {
   border-radius: 0.5em;
 }
@@ -106,9 +130,14 @@ body {
   border-bottom: 1px solid rgba(139, 172, 218, 0.5);
 }
 .card__info-title {
+  width: fit-content;
   color: white;
   font-size: 1.5rem;
   line-height: 1;
+  cursor: pointer;
+}
+.card__info-title:hover {
+  color: #00fff7;
 }
 .card__info-describe {
   color: #8bacda;
@@ -146,6 +175,10 @@ body {
 .card__creator-name > span {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
+  cursor: pointer;
+}
+.card__creator-name > span:hover {
+  color: #00fff7;
 }
 
 /*# sourceMappingURL=style.css.map */

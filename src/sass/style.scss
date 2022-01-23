@@ -1,5 +1,5 @@
 @use './resetCss';
-// variables
+
 $soft-blue: hsl(215, 51%, 70%);
 $cyan: hsl(178, 100%, 50%);
 $mainBg: hsl(217, 32%, 27%);
@@ -28,21 +28,48 @@ body {
   padding: 1.75em;
   background-color: $cardBg;
   border-radius: 1em;
-  &__picture > img{
-    border-radius: 0.5em;
+  &__picture {
+    position: relative;
+    cursor: pointer;
+    &::after, &::before {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    &::after {
+      content: url(/images/icon-view.svg);
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
+    &::before {
+      content: '';
+      background-color: rgba($color: $cyan, $alpha: 0.4);
+      border-radius: 0.5em;
+    }
+    &:hover::after, &:hover::before {
+      opacity: 1;
+    }
+    & > img {
+      border-radius: 0.5em;
+    }
   }
   &__info {
-    // margin-block: 1em;
-    // padding-top: 0.5em;
     padding-bottom: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
     border-bottom: 1px solid rgba($color: $soft-blue, $alpha: 0.5);
     &-title {
+      width: fit-content;
       color: white;
       font-size: 1.5rem;
       line-height: 1;
+      cursor: pointer;
+      &:hover {
+        color: $cyan;
+      }
     }
     &-describe {
       color: $soft-blue;
@@ -79,6 +106,10 @@ body {
       & > span {
         color: rgba($color: #fff, $alpha: 0.85);
         font-weight: 300;
+        cursor: pointer;
+        &:hover {
+          color: $cyan;
+        }
       }
     }
   }
