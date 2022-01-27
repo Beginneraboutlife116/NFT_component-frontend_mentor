@@ -103,7 +103,7 @@ body {
     }
     &-name {
       color: $soft-blue;
-      & > span {
+      & > strong {
         color: rgba($color: #fff, $alpha: 0.85);
         font-weight: 300;
         cursor: pointer;

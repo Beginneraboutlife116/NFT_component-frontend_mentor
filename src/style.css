@@ -172,12 +172,12 @@ body {
 .card__creator-name {
   color: #8bacda;
 }
-.card__creator-name > span {
+.card__creator-name > strong {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
   cursor: pointer;
 }
-.card__creator-name > span:hover {
+.card__creator-name > strong:hover {
   color: #00fff7;
 }
 
