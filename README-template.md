@@ -1,45 +1,52 @@
-# Frontend Mentor - NFT preview card component solution
+<h1>Frontend Mentor - NFT preview card component solution</h1>
 
-This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+<p>This is a solution to the <a href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U">NFT preview card component challenge on Frontend Mentor</a>.</p>
+<small>Frontend Mentor challenges help you improve your coding skills by building realistic projects. </small>
 
-## Table of contents
+<h2>Table of contents</h2>
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+<ul>
+  <li>
+    <a href="#overview">Overview</a>
+    <ul>
+      <li><a href="#the-challenge">The challenge</a></li>
+      <li><a href="#screenshot">Screenshot</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#my-process">My process</a>
+    <ul>
+      <li><a href="#built-with">Built with</a></li>
+      <li><a href="#what-i-learned">What I learned</a></li>
+      <li><a href="#continued-development">Continued development</a></li>
+      <li><a href="#useful-resources">Useful resources</a></li>
+    </ul>
+  </li>
+  <li><a href="#author">Author</a></li>
+  <li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+<strong>Note: Delete this note and update the table of contents based on what sections you keep.</strong>
 
-## Overview
+<h2 id="overview">Overview</h2>
 
-### The challenge
+<h3 id="the-challenge">The challenge</h3>
 
-Users should be able to:
+<h4>Users should be able to:</h4>
+<ul>
+  <li>View the optimal layout depending on their device's screen size</li>
+  <li>See hover states for interactive elements</li>
+</ul>
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+<h3 id="screenshot">Screenshot</h3>
 
-### Screenshot
+<div style="text-align: center;">
+  <img src="./screenshot/mobile.png" alt="mobile-screenshot">
+  <img src="./screenshot/desktop.png" alt="desktop-screenshot">
+</div>
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
+<h3 id="link">Links</h3>
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
