@@ -31,24 +31,18 @@ body {
   &__picture {
     position: relative;
     cursor: pointer;
-    &::after, &::before {
+    &::after {
       position: absolute;
       inset: 0;
       opacity: 0;
       transition: opacity 0.2s ease;
+      content: '';
     }
     &::after {
-      content: url(images/icon-view.svg);
-      width: fit-content;
-      height: fit-content;
-      margin: auto;
-    }
-    &::before {
-      content: '';
-      background-color: rgba($color: $cyan, $alpha: 0.4);
+      background: url(/images/icon-view.svg) no-repeat center rgba($color: $cyan, $alpha: 0.4);
       border-radius: 0.5em;
     }
-    &:hover::after, &:hover::before {
+    &:hover::after {
       opacity: 1;
     }
     & > img {

@@ -99,24 +99,18 @@ body {
   position: relative;
   cursor: pointer;
 }
-.card__picture::after, .card__picture::before {
+.card__picture::after {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 0.2s ease;
+  content: "";
 }
 .card__picture::after {
-  content: url(images/icon-view.svg);
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
-}
-.card__picture::before {
-  content: "";
-  background-color: rgba(0, 255, 247, 0.4);
+  background: url(/images/icon-view.svg) no-repeat center rgba(0, 255, 247, 0.4);
   border-radius: 0.5em;
 }
-.card__picture:hover::after, .card__picture:hover::before {
+.card__picture:hover::after {
   opacity: 1;
 }
 .card__picture > img {
