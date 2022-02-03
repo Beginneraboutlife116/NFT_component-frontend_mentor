@@ -39,7 +39,7 @@ body {
       content: '';
     }
     &::after {
-      background: url(/images/icon-view.svg) no-repeat center rgba($color: $cyan, $alpha: 0.4);
+      background: url(../images/icon-view.svg) no-repeat center rgba($color: $cyan, $alpha: 0.4);
       border-radius: 0.5em;
     }
     &:hover::after {

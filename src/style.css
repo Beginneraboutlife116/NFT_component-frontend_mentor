@@ -107,7 +107,7 @@ body {
   content: "";
 }
 .card__picture::after {
-  background: url(/images/icon-view.svg) no-repeat center rgba(0, 255, 247, 0.4);
+  background: url(../images/icon-view.svg) no-repeat center rgba(0, 255, 247, 0.4);
   border-radius: 0.5em;
 }
 .card__picture:hover::after {
