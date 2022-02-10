@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="src/style.css">
-  <title>Frontend Mentor | NFT preview card component</title>
-</head>
-<body>
-  <article class="card">
-    <figure class="card__picture">
-      <img src="./images/image-equilibrium.jpg" alt="Equilibrium #3429">
-    </figure>
-    <section class="card__info">
-      <h2 class="card__info-title">Equilibrium #3429</h2>
-      <h3 class="card__info-describe">Our Equilibrium collection promotes balance and calm.</h3>
-      <aside class="card__info-detail">
-        <p class="card__info-price">
-          <object data="./images/icon-ethereum.svg"></object>
-          <span class="card__info-price--unit">0.041 ETH</span>
-        </p>
-        <time class="card__info-time">
-          <object data="./images/icon-clock.svg"></object>
-          <time datetime="P3D">3 days left</time>
-        </time>
-      </aside>
-    </section>
-    <footer class="card__creator">
-      <figure class="card__creator-avatar"><img src="./images/image-avatar.png" alt=""></figure>
-      <p class="card__creator-info">
-        <span class="card__creator-name">Creation of <strong>Jules Wyvern</strong></span>
-      </p>
-    </footer>
-  </article>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <main role="main">
+      <article class="card">
+        <a href="#" class="link card__display_hover">
+          <img
+            src="./images/image-equilibrium.jpg"
+            class="card__display"
+            alt="Equilibrium #3429"
+          />
+        </a>
+        <section
+          class="card__describe"
+          role="region"
+          aria-labelledby="card-title"
+        >
+          <a href="#" class="link link_hover">
+            <h1 class="card__title" id="card-title">Equilibrium #3429</h1>
+          </a>
+          <p class="card__text">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <section
+            class="card__info"
+            role="region"
+            aria-label="card-information"
+          >
+            <section class="card__price" role="region" aria-label="price">
+              <img src="./images/icon-ethereum.svg" alt="price-icon" />
+              <span class="card__price-text">0.041 ETH</span>
+            </section>
+            <section class="card__duration" role="region" aria-label="duration">
+              <img src="./images/icon-clock.svg" alt="clock-icon" />
+              <time datetime="P3D">3 days left</time>
+            </section>
+          </section>
+        </section>
+        <footer class="card__created-by">
+          <img
+            class="card__creator-avatar"
+            src="./images/image-avatar.png"
+            alt="Jules Wyvern"
+          />
+          <p class="card__creator-info">
+            <span class="card__creator-name"
+              >Creation of
+              <a href="#" class="link link_hover">Jules Wyvern</a></span
+            >
+          </p>
+        </footer>
+      </article>
+    </main>
+  </body>
 </html>
