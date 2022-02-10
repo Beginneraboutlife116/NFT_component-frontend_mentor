@@ -13,98 +13,96 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: $mainBg;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+}
+
+.link {
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: $cyan;
+  }
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 21em;
-  height: 35em;
-  padding: 1.75em;
+  width: clamp(18.75em, 90%, 21em);
+  padding: 1.5em;
   background-color: $cardBg;
   border-radius: 1em;
-  &__picture {
-    position: relative;
-    cursor: pointer;
-    &::after {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      content: '';
-    }
-    &::after {
-      background: url(../images/icon-view.svg) no-repeat center rgba($color: $cyan, $alpha: 0.4);
-      border-radius: 0.5em;
-    }
-    &:hover::after {
-      opacity: 1;
-    }
-    & > img {
-      border-radius: 0.5em;
+  &__display {
+    border-radius: 0.5em;
+    &_hover {
+      position: relative;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        background: url(../images/icon-view.svg) no-repeat  center rgba($color: $cyan, $alpha: 0.4);
+        border-radius: 0.5em;
+        opacity: 0;
+        transition: opacity 250ms ease;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
     }
   }
-  &__info {
-    padding-bottom: 1em;
+  &__info-wrap {
+    padding-block: 1.25em 0.75em;
     display: flex;
     flex-direction: column;
     gap: 1em;
     border-bottom: 1px solid rgba($color: $soft-blue, $alpha: 0.5);
-    &-title {
-      width: fit-content;
-      color: white;
-      font-size: 1.5rem;
-      line-height: 1;
-      cursor: pointer;
-      &:hover {
-        color: $cyan;
-      }
-    }
-    &-describe {
-      color: $soft-blue;
-      font-size: 1rem;
-      font-weight: 300;
-    }
-    &-detail {
-      display: flex;
-      justify-content: space-between;
-    }
-    &-price, &-time {
+  }
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  &__text {
+    color: $soft-blue;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    & > section {
       display: flex;
       align-items: center;
       gap: 0.5em;
     }
-    &-price {
-      color: $cyan;
-    }
-    &-time {
-      color: $soft-blue;
-    }
   }
-  &__creator {
+  &__price-text {
+    color: $cyan;
+  }
+  &__created-by {
     display: flex;
     align-items: center;
+    padding-top: 1em;
     gap: 1em;
-    &-avatar {
-      width: 12.5%;
-      border: 1px solid rgba($color: #fff, $alpha: 0.85);
-      border-radius: 50%;
+    & .link {
+      flex-basis: 12.5%;
     }
-    &-name {
-      color: $soft-blue;
-      & > strong {
-        color: rgba($color: #fff, $alpha: 0.85);
-        font-weight: 300;
-        cursor: pointer;
-        &:hover {
-          color: $cyan;
-        }
-      }
-    }
+  }
+  &__creator-avatar {
+    border: 1px solid rgba($color: #fff, $alpha: 0.85);
+    border-radius: 50%;
+  }
+  &__creator-info > .card__text a {
+    opacity: 0.95;
   }
 }

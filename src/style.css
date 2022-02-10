@@ -79,100 +79,98 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #0d192b;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1em;
+}
+
+.link {
+  width: fit-content;
+  text-decoration: none;
+  color: white;
+}
+.link:hover {
+  color: #00fff7;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 21em;
-  height: 35em;
-  padding: 1.75em;
+  width: clamp(18.75em, 90%, 21em);
+  padding: 1.5em;
   background-color: #14253d;
   border-radius: 1em;
 }
-.card__picture {
-  position: relative;
-  cursor: pointer;
+.card__display {
+  border-radius: 0.5em;
 }
-.card__picture::after {
+.card__display_hover {
+  position: relative;
+}
+.card__display_hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
   inset: 0;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  content: "";
-}
-.card__picture::after {
   background: url(../images/icon-view.svg) no-repeat center rgba(0, 255, 247, 0.4);
   border-radius: 0.5em;
+  opacity: 0;
+  transition: opacity 250ms ease;
 }
-.card__picture:hover::after {
+.card__display_hover:hover::after {
   opacity: 1;
 }
-.card__picture > img {
-  border-radius: 0.5em;
-}
-.card__info {
-  padding-bottom: 1em;
+.card__info-wrap {
+  padding-block: 1.25em 0.75em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   border-bottom: 1px solid rgba(139, 172, 218, 0.5);
 }
-.card__info-title {
-  width: fit-content;
-  color: white;
+.card__title {
   font-size: 1.5rem;
   line-height: 1;
-  cursor: pointer;
 }
-.card__info-title:hover {
-  color: #00fff7;
-}
-.card__info-describe {
+.card__text {
   color: #8bacda;
   font-size: 1rem;
   font-weight: 300;
 }
-.card__info-detail {
+.card__details {
   display: flex;
   justify-content: space-between;
 }
-.card__info-price, .card__info-time {
+.card__details > section {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
-.card__info-price {
+.card__price-text {
   color: #00fff7;
 }
-.card__info-time {
-  color: #8bacda;
-}
-.card__creator {
+.card__created-by {
   display: flex;
   align-items: center;
+  padding-top: 1em;
   gap: 1em;
 }
+.card__created-by .link {
+  flex-basis: 12.5%;
+}
 .card__creator-avatar {
-  width: 12.5%;
   border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: 50%;
 }
-.card__creator-name {
-  color: #8bacda;
-}
-.card__creator-name > strong {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 300;
-  cursor: pointer;
-}
-.card__creator-name > strong:hover {
-  color: #00fff7;
+.card__creator-info > .card__text a {
+  opacity: 0.95;
 }
 
 /*# sourceMappingURL=style.css.map */
